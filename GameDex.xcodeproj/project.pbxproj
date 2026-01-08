@@ -6,8 +6,28 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7B7275532E1EB88200B77D94 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7B7275522E1EB88200B77D94 /* Alamofire */; };
+		7BD15EA02E2CC29700E38ED3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD15E9F2E2CC29700E38ED3 /* Kingfisher */; };
+		7BDFEE452E3671D1001D5952 /* GameModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFEE432E3671D1001D5952 /* GameModel.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7B7275592E1EBACF00B77D94 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7B72753A2E1EB5E600B77D94 /* GameDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BDFEE442E3671D1001D5952 /* GameModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD15EA02E2CC29700E38ED3 /* Kingfisher in Frameworks */,
+				7B7275532E1EB88200B77D94 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +54,7 @@
 		7B7275312E1EB5E600B77D94 = {
 			isa = PBXGroup;
 			children = (
+				7BDFEE432E3671D1001D5952 /* GameModel.xcdatamodeld */,
 				7B72753C2E1EB5E600B77D94 /* GameDex */,
 				7B72753B2E1EB5E600B77D94 /* Products */,
 			);
@@ -55,6 +78,7 @@
 				7B7275362E1EB5E600B77D94 /* Sources */,
 				7B7275372E1EB5E600B77D94 /* Frameworks */,
 				7B7275382E1EB5E600B77D94 /* Resources */,
+				7B7275592E1EBACF00B77D94 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -65,6 +89,8 @@
 			);
 			name = GameDex;
 			packageProductDependencies = (
+				7B7275522E1EB88200B77D94 /* Alamofire */,
+				7BD15E9F2E2CC29700E38ED3 /* Kingfisher */,
 			);
 			productName = GameDex;
 			productReference = 7B72753A2E1EB5E600B77D94 /* GameDex.app */;
@@ -94,6 +120,10 @@
 			);
 			mainGroup = 7B7275312E1EB5E600B77D94;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7B7275512E1EB88200B77D94 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				7BD15E9E2E2CC29700E38ED3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7B72753B2E1EB5E600B77D94 /* Products */;
 			projectDirPath = "";
@@ -119,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BDFEE452E3671D1001D5952 /* GameModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +355,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B7275512E1EB88200B77D94 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		7BD15E9E2E2CC29700E38ED3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B7275522E1EB88200B77D94 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B7275512E1EB88200B77D94 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		7BD15E9F2E2CC29700E38ED3 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BD15E9E2E2CC29700E38ED3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		7BDFEE432E3671D1001D5952 /* GameModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7BDFEE442E3671D1001D5952 /* GameModel.xcdatamodel */,
+			);
+			currentVersion = 7BDFEE442E3671D1001D5952 /* GameModel.xcdatamodel */;
+			path = GameModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7B7275322E1EB5E600B77D94 /* Project object */;
 }
