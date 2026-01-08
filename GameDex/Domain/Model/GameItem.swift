@@ -11,7 +11,7 @@ struct GameItem: Identifiable {
     let imageURL: String?
     let rating: Float?
     let released: String?
-    
+
     var formattedDate: String {
       return (self.released ?? "").formateToStringDate(
             inputFormat: "yyyy-MM-dd",

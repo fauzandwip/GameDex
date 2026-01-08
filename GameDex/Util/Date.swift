@@ -14,13 +14,13 @@ extension String {
   ) -> String {
     let inputFormatter = DateFormatter()
     inputFormatter.dateFormat = inputFormat
-    
+
     if let date = inputFormatter.date(from: self) {
       let outputFormatter = DateFormatter()
       outputFormatter.dateFormat = outputFormat
       return outputFormatter.string(from: date)
     }
-    
+
     return "Invalid date"
   }
 }

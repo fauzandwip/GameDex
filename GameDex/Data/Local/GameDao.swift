@@ -12,7 +12,7 @@ class GameDao {
 
     func getListGame() -> [GameItemEntity] {
         let request = GameItemEntity.fetchRequest()
-        
+
         do {
             let games = try context.fetch(request)
             return games
@@ -21,12 +21,12 @@ class GameDao {
             return []
         }
     }
-    
+
     func getGame(id: Int) -> GameItemEntity? {
         let request = GameItemEntity.fetchRequest()
         request.predicate = NSPredicate(format: "id == %@", String(id))
         request.fetchLimit = 1
-        
+
         do {
             let games = try context.fetch(request)
             return games.first
@@ -35,32 +35,32 @@ class GameDao {
             return nil
         }
     }
-    
+
     func addGame(game: GameDetail) -> Bool {
-        if let _ = getGame(id: game.id) {
+        if getGame(id: game.id) != nil {
             return true
         }
-        
+
         let gameEntity = GameItemEntity(context: self.context)
         gameEntity.id = Int64(game.id)
         gameEntity.name = game.name
         gameEntity.imageURL = game.backgroundImage
         gameEntity.rating = game.rating ?? 0
         gameEntity.released = game.released
-        
+
         return saveContext()
     }
-    
+
     func deleteGame(id: Int) -> Bool {
         guard let game = getGame(id: id) else {
             print("Game with id \(id) not found")
             return false
         }
-        
+
         context.delete(game)
         return saveContext()
     }
-    
+
     private func saveContext() -> Bool {
         return context.saveContext()
     }

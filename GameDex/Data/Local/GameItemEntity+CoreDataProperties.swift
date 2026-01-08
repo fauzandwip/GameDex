@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension GameItemEntity {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<GameItemEntity> {
@@ -21,7 +20,7 @@ extension GameItemEntity {
     @NSManaged public var imageURL: String?
     @NSManaged public var rating: Float
     @NSManaged public var released: String?
-    
+
     func toModel() -> GameItem {
         GameItem(
             id: Int(self.id),
@@ -34,6 +33,6 @@ extension GameItemEntity {
 
 }
 
-extension GameItemEntity : Identifiable {
+extension GameItemEntity: Identifiable {
 
 }

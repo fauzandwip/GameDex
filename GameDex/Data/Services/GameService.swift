@@ -9,17 +9,17 @@ import Combine
 
 class GameService {
     private var service: APIServiceProtocol
-    
+
     init(service: APIServiceProtocol) {
         self.service = service
     }
-    
+
     func getGameList(
         search: String,
         sort: Sort
     ) -> AnyPublisher<[GameItem], APIError> {
         let url = "/games"
-        
+
         let sortValue = sort == .latest ? "-released" : "released"
         let parameters = ["search": search, "ordering": sortValue]
 
@@ -31,7 +31,7 @@ class GameService {
         .map { res in res.toModel() }
         .eraseToAnyPublisher()
     }
-    
+
     func getGameDetail(
         id: String
     ) -> AnyPublisher<GameDetail, APIError> {

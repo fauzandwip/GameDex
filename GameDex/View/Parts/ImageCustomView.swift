@@ -14,7 +14,7 @@ struct ImageCustomView: View {
     let width: CGFloat?
     let height: CGFloat?
     let radius: CGFloat
-    
+
     init(
         isError: Bool = false,
         url: String,
@@ -28,7 +28,7 @@ struct ImageCustomView: View {
         self.height = height
         self.radius = radius
     }
-    
+
     var body: some View {
         if isError {
             RoundedRectangle(cornerRadius: 12)

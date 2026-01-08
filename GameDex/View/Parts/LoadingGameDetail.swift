@@ -15,11 +15,11 @@ struct LoadingGameDetail: View {
                     .frame(maxWidth: .infinity)
                     .frame(height: 200)
             }
-            
+
             VStack(alignment: .leading, spacing: 10) {
                 RoundedRectangle(cornerRadius: 14)
                     .frame(width: 100, height: 16)
-                
+
                 RoundedRectangle(cornerRadius: 14)
                     .frame(maxWidth: .infinity)
                     .frame(height: 300)

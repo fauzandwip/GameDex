@@ -9,9 +9,9 @@ import CoreData
 
 class PersistenceShared {
     static let shared = PersistenceShared()
-    
+
     private init() {}
-    
+
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "GameModel")
         container.loadPersistentStores { _, error in
@@ -21,7 +21,7 @@ class PersistenceShared {
         }
         return container
     }()
-    
+
     var context: NSManagedObjectContext {
         return persistentContainer.viewContext
     }

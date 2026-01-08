@@ -15,7 +15,7 @@ struct GameItemResponse: Codable {
     let backgroundImage: String?
     let rating: Float?
     let released: String?
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case name

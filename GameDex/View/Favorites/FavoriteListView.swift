@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct FavoriteListView: View {
-    @StateObject private var vm = FavoriteListViewModel()
-    
+    @StateObject private var viewModel = FavoriteListViewModel()
+
     private let columns = [
         GridItem(.adaptive(minimum: 150, maximum: 150))
     ]
-    
+
     var body: some View {
         NavigationView {
             VStack {
-                if vm.favorites.isEmpty {
+                if viewModel.favorites.isEmpty {
                     Text("Your favorites list is empty.")
                         .font(.headline)
                         .fontWeight(.bold)
@@ -30,15 +30,15 @@ struct FavoriteListView: View {
             .foregroundStyle(.white)
             .navigationTitle("Favorites")
             .onAppear {
-                vm.reload()
+                viewModel.reload()
             }
         }
     }
-    
+
     var mainContent: some View {
         ScrollView(showsIndicators: false) {
             LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(vm.favorites) { item in
+                ForEach(viewModel.favorites) { item in
                     NavigationLink {
                         GameDetailView(gameId: item.id)
                     } label: {
@@ -48,7 +48,7 @@ struct FavoriteListView: View {
             }
         }
     }
-    
+
     private func card(game: GameItem) -> some View {
         VStack {
             ImageCustomView(
@@ -57,7 +57,7 @@ struct FavoriteListView: View {
                 height: 150,
                 radius: 20
             )
-            
+
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 5) {
                     HStack {
@@ -66,16 +66,16 @@ struct FavoriteListView: View {
                             .fontWeight(.medium)
                             .lineLimit(1)
                             .truncationMode(.tail)
-                        
+
                         Spacer()
-                        
+
                         favoriteIcon(game: game)
                     }
-                    
+
                     Text("\(game.formattedDate)")
                         .fontWeight(.bold)
                         .font(.headline)
-                    
+
                     HStack(spacing: 2) {
                         Image(systemName: "star.fill")
                             .foregroundStyle(.yellow)
@@ -85,17 +85,17 @@ struct FavoriteListView: View {
                 }
                 .frame(maxWidth: .infinity)
             }
-            
+
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .cornerRadius(10)
         .frame(maxWidth: 200)
         .padding(5)
     }
-    
+
     private func favoriteIcon(game: GameItem) -> some View {
         Button {
-            vm.deleteGame(game: game)
+            viewModel.deleteGame(game: game)
         } label: {
             Image(systemName: "heart.fill")
                 .font(.title3)

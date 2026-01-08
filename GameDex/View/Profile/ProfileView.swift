@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @StateObject private var vm = ProfileViewModel()
-    
+    @StateObject private var viewModel = ProfileViewModel()
+
     var body: some View {
         VStack {
             Image(.profile)
@@ -17,13 +17,13 @@ struct ProfileView: View {
                 .frame(width: 250, height: 250)
                 .clipShape(.circle)
                 .padding(.bottom, 20)
-            
-            Text(vm.name)
+
+            Text(viewModel.name)
                 .font(.title)
                 .fontWeight(.bold)
                 .padding(.bottom, 4)
-            
-            Text(vm.description)
+
+            Text(viewModel.description)
                 .font(.headline)
                 .italic()
         }
@@ -34,17 +34,17 @@ struct ProfileView: View {
         .toolbar {
             ToolbarItem {
                 Button {
-                    vm.showSheet.toggle()
+                    viewModel.showSheet.toggle()
                 } label: {
                     Image(systemName: "pencil")
                 }
             }
         }
-        .sheet(isPresented: $vm.showSheet) {
+        .sheet(isPresented: $viewModel.showSheet) {
             formSheet()
         }
     }
-    
+
     private func formSheet() -> some View {
         NavigationView {
             VStack(spacing: 20) {
@@ -52,7 +52,7 @@ struct ProfileView: View {
                     Text("Name :")
                         .font(.headline)
                         .fontWeight(.bold)
-                    TextField("Name", text: $vm.name)
+                    TextField("Name", text: $viewModel.name)
                         .padding(8)
                         .background(Color.white.opacity(0.3))
                         .cornerRadius(6)
@@ -61,7 +61,7 @@ struct ProfileView: View {
                     Text("Description :")
                         .font(.headline)
                         .fontWeight(.bold)
-                    TextField("Description", text: $vm.description)
+                    TextField("Description", text: $viewModel.description)
                         .padding(8)
                         .background(Color.white.opacity(0.3))
                         .cornerRadius(6)
@@ -75,7 +75,7 @@ struct ProfileView: View {
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done") {
-                        vm.showSheet.toggle()
+                        viewModel.showSheet.toggle()
                     }
                 }
             }

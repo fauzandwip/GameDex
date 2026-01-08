@@ -13,7 +13,7 @@ struct GameDetailResponse: Codable {
     let rating: Float?
     let genres: [GenreResponse]?
     let description: String?
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case name

@@ -10,27 +10,27 @@ import Kingfisher
 
 struct GameListView: View {
     @StateObject
-    private var vm = GameListViewModel()
-    
+    private var viewModel = GameListViewModel()
+
     init() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = .black
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        
+
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
-    
+
     var body: some View {
         NavigationView {
             VStack {
                 searchView
-                
-                if vm.isLoading {
+
+                if viewModel.isLoading {
                     LoadingGameList()
-                } else if let errorMessage = vm.errorMessage {
+                } else if let errorMessage = viewModel.errorMessage {
                     ErrorView(message: errorMessage)
                 } else {
                     gameListView
@@ -50,20 +50,20 @@ struct GameListView: View {
                     }
                 }
             }
-            .onChange(of: vm.search) { _, newValue in
-                vm.onSearch(keyword: newValue)
+            .onChange(of: viewModel.search) { _, newValue in
+                viewModel.onSearch(keyword: newValue)
             }
-            .onChange(of: vm.sort) { _, newValue in
-                vm.onSort(sort: newValue)
+            .onChange(of: viewModel.sort) { _, newValue in
+                viewModel.onSort(sort: newValue)
             }
         }
     }
-    
+
     private var searchView: some View {
         HStack(spacing: 6) {
             TextField(
                 "",
-                text: $vm.search,
+                text: $viewModel.search,
                 prompt: Text("search game ...").foregroundStyle(.gray.opacity(0.5))
             )
             .padding(.horizontal, 12)
@@ -71,26 +71,26 @@ struct GameListView: View {
             .background(.white)
             .clipShape(.capsule)
             .foregroundStyle(.black)
-            
+
             sortView
         }
         .padding(.vertical, 10)
         .padding(.horizontal, 20)
     }
-    
+
     private var sortView: some View {
-        Picker("Sort", selection: $vm.sort) {
+        Picker("Sort", selection: $viewModel.sort) {
             ForEach(Sort.allCases, id: \.self) { sort in
                 Text(sort.rawValue.capitalized)
                     .tag(sort.rawValue)
             }
         }
     }
-    
+
     private var gameListView: some View {
         ScrollView {
             VStack(spacing: 25) {
-                ForEach(vm.gameList) { game in
+                ForEach(viewModel.gameList) { game in
                     NavigationLink {
                         GameDetailView(gameId: game.id)
                     } label: {
@@ -101,7 +101,7 @@ struct GameListView: View {
             .padding(.horizontal, 20)
         }
     }
-    
+
     private func gameItemView(game: GameItem) -> some View {
         HStack(spacing: 20) {
             ImageCustomView(
@@ -110,15 +110,15 @@ struct GameListView: View {
                 height: 100,
                 radius: 20
             )
-            
+
             VStack(alignment: .leading) {
                 Text(game.name ?? "Game Name")
                     .font(.headline)
                     .fontWeight(.bold)
-                
+
                 Spacer()
                     .frame(maxWidth: .infinity)
-                
+
                 HStack(spacing: 20) {
                     Text(game.formattedDate)
                         .foregroundStyle(.white)

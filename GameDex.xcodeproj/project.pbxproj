@@ -79,6 +79,7 @@
 				7B7275372E1EB5E600B77D94 /* Frameworks */,
 				7B7275382E1EB5E600B77D94 /* Resources */,
 				7B7275592E1EBACF00B77D94 /* Embed Frameworks */,
+				7B13BF742F100D7A0095C27F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -143,6 +144,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B13BF742F100D7A0095C27F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B7275362E1EB5E600B77D94 /* Sources */ = {
@@ -285,6 +306,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"GameDex/Preview Content\"";
 				DEVELOPMENT_TEAM = B9S7PB8R45;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -314,6 +336,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"GameDex/Preview Content\"";
 				DEVELOPMENT_TEAM = B9S7PB8R45;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

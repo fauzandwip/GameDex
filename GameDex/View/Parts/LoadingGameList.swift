@@ -15,18 +15,18 @@ struct LoadingGameList: View {
                     HStack(spacing: 20) {
                         RoundedRectangle(cornerRadius: 20)
                             .frame(width: 100, height: 100)
-                        
+
                         VStack(alignment: .leading) {
                             RoundedRectangle(cornerRadius: 8)
                                 .frame(width: 200, height: 14)
-                            
+
                             Spacer()
                                 .frame(maxWidth: .infinity)
-                            
+
                             HStack(spacing: 20) {
                                 RoundedRectangle(cornerRadius: 8)
                                     .frame(width: 100, height: 14)
-                                
+
                                 RoundedRectangle(cornerRadius: 8)
                                     .frame(width: 50, height: 14)
                             }

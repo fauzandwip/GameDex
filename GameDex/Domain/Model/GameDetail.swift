@@ -13,7 +13,7 @@ struct GameDetail {
     let rating: Float?
     let genres: [Genre]?
     let description: String?
-    
+
     var formattedDate: String {
       return (self.released ?? "").formateToStringDate(
             inputFormat: "yyyy-MM-dd",
