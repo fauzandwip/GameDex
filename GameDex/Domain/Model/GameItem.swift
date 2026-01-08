@@ -13,8 +13,7 @@ struct GameItem: Identifiable {
     let released: String?
     
     var formattedDate: String {
-        return formateToStringDate(
-            stringDate: self.released ?? "",
+      return (self.released ?? "").formateToStringDate(
             inputFormat: "yyyy-MM-dd",
             outputFormat: "dd MMM yyyy"
         )

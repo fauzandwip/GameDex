@@ -7,19 +7,20 @@
 
 import Foundation
 
-func formateToStringDate(
-    stringDate: String,
+extension String {
+  func formateToStringDate(
     inputFormat: String,
     outputFormat: String
-) -> String {
+  ) -> String {
     let inputFormatter = DateFormatter()
     inputFormatter.dateFormat = inputFormat
     
-    if let date = inputFormatter.date(from: stringDate) {
-        let outputFormatter = DateFormatter()
-        outputFormatter.dateFormat = outputFormat
-        return outputFormatter.string(from: date)
+    if let date = inputFormatter.date(from: self) {
+      let outputFormatter = DateFormatter()
+      outputFormatter.dateFormat = outputFormat
+      return outputFormatter.string(from: date)
     }
     
-    return ""
+    return "Invalid date"
+  }
 }

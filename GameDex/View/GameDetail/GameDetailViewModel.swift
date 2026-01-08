@@ -55,11 +55,9 @@ class GameDetailViewModel: ObservableObject {
     func updateFavorite() {
         guard let game = gameDetail else { return }
         
-        if isFavorite {
-            let _ = gameDao.deleteGame(id: game.id)
-        } else {
-            let _ = gameDao.addGame(game: game)
-        }
+      let _ = isFavorite
+      ? gameDao.deleteGame(id: game.id)
+      : gameDao.addGame(game: game)
         
         isFavorite.toggle()
     }

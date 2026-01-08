@@ -29,7 +29,6 @@ protocol APIServiceProtocol {
 }
 
 class APIService: APIServiceProtocol {
-    private let apiKey = "ccefeca767674112bc9d8a9fb5247b44"
     private let baseURL = "https://api.rawg.io/api"
     
     func fetch<T: Codable>(
@@ -61,4 +60,25 @@ class APIService: APIServiceProtocol {
         .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
     }
+}
+
+extension APIService {
+  private var apiKey: String {
+    get {
+      guard let filePath = Bundle.main.path(forResource: "RAWG-Info", ofType: "plist") else {
+        fatalError("Couldn't find file 'RAWG-Info.plist'.")
+      }
+      
+      let plist = NSDictionary(contentsOfFile: filePath)
+      guard let value = plist?.object(forKey: "RAWG_API_KEY") as? String else {
+        fatalError("Couldn't find key 'RAWG_API_KEY' in 'RAWG-Info.plist'.")
+      }
+      
+      if (value.starts(with: "_")) {
+        fatalError("Register for a RAWG developer account and get an API key at https://rawg.io/apidocs.")
+      }
+      
+      return value
+    }
+  }
 }
