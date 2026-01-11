@@ -6,27 +6,51 @@
 //
 
 import Foundation
+import FactoryKit
 
 class ProfileViewModel: ObservableObject {
-    @Published var showSheet = false
-
-    @Published var name: String {
-        didSet {
-            UserDefaults.standard.set(name, forKey: "name")
-        }
+  
+  private var useCase: ProfileUseCase
+  
+  @Published var showSheet = false
+  
+  @Published var name: String {
+    didSet {
+      setName(with: name)
     }
-
-    @Published var description: String {
-        didSet {
-            UserDefaults.standard.set(description, forKey: "description")
-        }
+  }
+  
+  @Published var description: String {
+    didSet {
+      setDescription(with: description)
     }
-
-    init() {
-        let nameLocal = UserDefaults.standard.string(forKey: "name") ?? ""
-        self.name = nameLocal.isEmpty ? "Fauzan Dwi Prasetyo" : nameLocal
-
-        let descriptionLocal = UserDefaults.standard.string(forKey: "description") ?? ""
-        self.description = descriptionLocal.isEmpty ? "iOS Development Enthusiast" : descriptionLocal
-    }
+  }
+  
+  init(useCase: ProfileUseCase) {
+    self.useCase = useCase
+    name = useCase.getUserName()
+    description = useCase.getUserDescription()
+  }
+  
+  func setup() {
+    getName()
+    getDescription()
+  }
+  
+  func getName() {
+    name = useCase.getUserName()
+  }
+  
+  func getDescription() {
+    description = useCase.getUserDescription()
+  }
+  
+  func setName(with name: String) {
+    useCase.setUserName(with: name)
+  }
+  
+  func setDescription(with description: String) {
+    useCase.setUserDescription(with: description)
+  }
+  
 }

@@ -6,26 +6,26 @@
 //
 
 struct GameDetailResponse: Codable {
-    let id: Int
-    let name: String?
-    let backgroundImage: String?
-    let released: String?
-    let rating: Float?
-    let genres: [GenreResponse]?
-    let description: String?
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case name
-        case backgroundImage = "background_image"
-        case rating
-        case released
-        case genres
-        case description = "description_raw"
-    }
+  let id: Int
+  let name: String?
+  let backgroundImage: String?
+  let released: String?
+  let rating: Float?
+  let genres: [GenreResponse]?
+  let description: String?
+  
+  enum CodingKeys: String, CodingKey {
+    case id
+    case name
+    case backgroundImage = "background_image"
+    case rating
+    case released
+    case genres
+    case description = "description_raw"
+  }
 }
 
 struct GenreResponse: Codable {
-    let id: Int
-    let name: String
+  let id: Int
+  let name: String
 }

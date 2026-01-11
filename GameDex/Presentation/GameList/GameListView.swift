@@ -7,10 +7,13 @@
 
 import SwiftUI
 import Kingfisher
+import FactoryKit
 
 struct GameListView: View {
-    @StateObject
-    private var viewModel = GameListViewModel()
+//    @StateObject
+//    private var viewModel = GameListViewModel()
+  @InjectedObject(\.gameListViewModel)
+  private var viewModel: GameListViewModel
 
     init() {
         let appearance = UINavigationBarAppearance()

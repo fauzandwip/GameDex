@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import FactoryKit
 
 struct FavoriteListView: View {
-    @StateObject private var viewModel = FavoriteListViewModel()
+  @InjectedObject(\.favoriteListViewModel)
+  var viewModel: FavoriteListViewModel
 
     private let columns = [
         GridItem(.adaptive(minimum: 150, maximum: 150))
@@ -30,7 +32,7 @@ struct FavoriteListView: View {
             .foregroundStyle(.white)
             .navigationTitle("Favorites")
             .onAppear {
-                viewModel.reload()
+                viewModel.fetchFavorites()
             }
         }
     }
@@ -95,7 +97,7 @@ struct FavoriteListView: View {
 
     private func favoriteIcon(game: GameItem) -> some View {
         Button {
-            viewModel.deleteGame(game: game)
+          viewModel.deleteGame(id: game.id)
         } label: {
             Image(systemName: "heart.fill")
                 .font(.title3)

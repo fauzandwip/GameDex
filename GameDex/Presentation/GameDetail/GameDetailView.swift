@@ -7,14 +7,15 @@
 
 import SwiftUI
 import Kingfisher
+import FactoryKit
 
 struct GameDetailView: View {
     @StateObject private var viewModel: GameDetailViewModel
     var gameId: Int
 
     init(gameId: Int) {
-        self.gameId = gameId
-        self._viewModel = StateObject(wrappedValue: GameDetailViewModel(id: gameId))
+      self.gameId = gameId
+      self._viewModel = StateObject(wrappedValue: Container.shared.gameDetailViewModel(gameId))
     }
 
     var body: some View {
@@ -41,7 +42,7 @@ struct GameDetailView: View {
             }
         }
         .onAppear {
-            viewModel.reload(id: gameId)
+            viewModel.getIsFavorite(id: gameId)
         }
     }
 

@@ -6,22 +6,43 @@
 //
 
 import Foundation
+import Combine
+import FactoryKit
 
 class FavoriteListViewModel: ObservableObject {
-    private var gameDao = GameDao()
+  
+  @Injected(\.favoriteListUseCase)
+  private var useCase: FavoriteListUseCase
+  
+  @Published var favorites: [GameItem] = []
+  
+  private var cancellables = Set<AnyCancellable>()
+  
+  func fetchFavorites() {
+    getList()
+  }
+  
+  func getList() {
+    useCase.getList()
+      .sink { _ in
+      } receiveValue: { [weak self] favorites in
+        self?.favorites = favorites
+      }
+      .store(in: &cancellables)
 
-    @Published var favorites: [GameItem] = []
-
-    func reload() {
-        favorites = getList()
+  }
+  
+  func deleteGame(id: Int) {
+    if let index = favorites.firstIndex(where: { $0.id == id }) {
+      favorites.remove(at: index)
     }
-
-    func getList() -> [GameItem] {
-        return gameDao.getListGame().map { $0.toModel() }
-    }
-
-    func deleteGame(game: GameItem) {
-        _ = gameDao.deleteGame(id: game.id)
-        reload()
-    }
+    
+    useCase.deleteGame(id: id)
+      .receive(on: DispatchQueue.main)
+      .sink { _ in
+      } receiveValue: { _ in
+      }
+      .store(in: &cancellables)
+  }
+  
 }

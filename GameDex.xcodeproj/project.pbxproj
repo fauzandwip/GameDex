@@ -10,7 +10,6 @@
 		7B21B0862F1019E9003B22D6 /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7B21B0852F1019E9003B22D6 /* FactoryKit */; };
 		7B7275532E1EB88200B77D94 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7B7275522E1EB88200B77D94 /* Alamofire */; };
 		7BD15EA02E2CC29700E38ED3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD15E9F2E2CC29700E38ED3 /* Kingfisher */; };
-		7BDFEE452E3671D1001D5952 /* GameModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFEE432E3671D1001D5952 /* GameModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,7 +27,6 @@
 
 /* Begin PBXFileReference section */
 		7B72753A2E1EB5E600B77D94 /* GameDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BDFEE442E3671D1001D5952 /* GameModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -56,7 +54,6 @@
 		7B7275312E1EB5E600B77D94 = {
 			isa = PBXGroup;
 			children = (
-				7BDFEE432E3671D1001D5952 /* GameModel.xcdatamodeld */,
 				7B72753C2E1EB5E600B77D94 /* GameDex */,
 				7B72753B2E1EB5E600B77D94 /* Products */,
 			);
@@ -174,7 +171,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BDFEE452E3671D1001D5952 /* GameModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,19 +423,6 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		7BDFEE432E3671D1001D5952 /* GameModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7BDFEE442E3671D1001D5952 /* GameModel.xcdatamodel */,
-			);
-			currentVersion = 7BDFEE442E3671D1001D5952 /* GameModel.xcdatamodel */;
-			path = GameModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7B7275322E1EB5E600B77D94 /* Project object */;
 }

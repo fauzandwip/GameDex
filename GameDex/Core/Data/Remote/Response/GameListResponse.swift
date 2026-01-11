@@ -6,21 +6,21 @@
 //
 
 struct GameListResponse: Codable {
-    let results: [GameItemResponse]
+  let results: [GameItemResponse]
 }
 
 struct GameItemResponse: Codable {
-    let id: Int
-    let name: String?
-    let backgroundImage: String?
-    let rating: Float?
-    let released: String?
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case name
-        case backgroundImage = "background_image"
-        case rating
-        case released
-    }
+  let id: Int
+  let name: String?
+  let backgroundImage: String?
+  let rating: Float?
+  let released: String?
+  
+  enum CodingKeys: String, CodingKey {
+    case id
+    case name
+    case backgroundImage = "background_image"
+    case rating
+    case released
+  }
 }
