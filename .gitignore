@@ -2,7 +2,7 @@
 RAWG-Info.plist
 
 ## User settings
-xcuserdata/
+*.xcuserdata/
 
 ## Obj-C/Swift specific
 *.hmap

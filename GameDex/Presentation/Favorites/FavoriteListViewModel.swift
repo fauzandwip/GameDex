@@ -18,11 +18,7 @@ class FavoriteListViewModel: ObservableObject {
   
   private var cancellables = Set<AnyCancellable>()
   
-  func fetchFavorites() {
-    getList()
-  }
-  
-  func getList() {
+  func getFavorites() {
     useCase.getList()
       .sink { _ in
       } receiveValue: { [weak self] favorites in

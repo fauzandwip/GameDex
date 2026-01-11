@@ -12,45 +12,34 @@ class ProfileViewModel: ObservableObject {
   
   private var useCase: ProfileUseCase
   
-  @Published var showSheet = false
-  
-  @Published var name: String {
-    didSet {
-      setName(with: name)
-    }
-  }
-  
-  @Published var description: String {
-    didSet {
-      setDescription(with: description)
-    }
-  }
+  @Published var name: String
+  @Published var description: String
   
   init(useCase: ProfileUseCase) {
     self.useCase = useCase
-    name = useCase.getUserName()
-    description = useCase.getUserDescription()
+    self.name = useCase.getUserName()
+    self.description = useCase.getUserDescription()
   }
   
-  func setup() {
-    getName()
-    getDescription()
-  }
-  
-  func getName() {
+  private func getName() {
     name = useCase.getUserName()
   }
   
-  func getDescription() {
+  private func getDescription() {
     description = useCase.getUserDescription()
   }
   
-  func setName(with name: String) {
+  private func setName() {
     useCase.setUserName(with: name)
   }
   
-  func setDescription(with description: String) {
+  private func setDescription() {
     useCase.setUserDescription(with: description)
+  }
+  
+  func onSubmit() {
+    setName()
+    setDescription()
   }
   
 }

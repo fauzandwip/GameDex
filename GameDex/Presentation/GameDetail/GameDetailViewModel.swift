@@ -24,9 +24,7 @@ class GameDetailViewModel: ObservableObject {
   private var cancellables = Set<AnyCancellable>()
   
   init(id: Int) {
-    Task {
-      getDetail(id: id)
-    }
+    getDetail(id: id)
   }
   
   func getIsFavorite(id: Int) {
@@ -40,9 +38,16 @@ class GameDetailViewModel: ObservableObject {
         receiveSubscription: { [weak self] _ in
           DispatchQueue.main.async {
             self?.isLoading = true
+            self?.errorMessage = nil
           }
-        }, receiveCompletion: { [weak self] _ in
+        },
+        receiveCompletion: { [weak self] _ in
           self?.isLoading = false
+        },
+        receiveCancel: { [weak self] in
+          DispatchQueue.main.async {
+            self?.isLoading = false
+          }
         }
       )
       .sink { [weak self] completion in
@@ -60,13 +65,14 @@ class GameDetailViewModel: ObservableObject {
   
   func updateFavorite() {
     guard let game = gameDetail else { return }
+    
     isFavorite.toggle()
     
     useCase.updateFavorite(game: game)
       .receive(on: DispatchQueue.main)
       .sink { _ in
       } receiveValue: { _ in
-      } .store(in: &cancellables)
+      }.store(in: &cancellables)
 
   }
   

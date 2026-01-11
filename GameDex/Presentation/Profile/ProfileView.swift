@@ -12,6 +12,8 @@ struct ProfileView: View {
   @InjectedObject(\.profileViewModel)
   private var viewModel: ProfileViewModel
   
+  @State private var showSheet = false
+  
   var body: some View {
     VStack {
       Image(.profile)
@@ -36,38 +38,26 @@ struct ProfileView: View {
     .toolbar {
       ToolbarItem {
         Button {
-          viewModel.showSheet.toggle()
+          showSheet.toggle()
         } label: {
           Image(systemName: "pencil")
         }
       }
     }
-    .sheet(isPresented: $viewModel.showSheet) {
+    .sheet(isPresented: $showSheet) {
       formSheet()
     }
   }
   
+}
+
+extension ProfileView {
+  
   private func formSheet() -> some View {
     NavigationView {
       VStack(spacing: 20) {
-        VStack(alignment: .leading, spacing: 10) {
-          Text("Name :")
-            .font(.headline)
-            .fontWeight(.bold)
-          TextField("Name", text: $viewModel.name)
-            .padding(8)
-            .background(Color.white.opacity(0.3))
-            .cornerRadius(6)
-        }
-        VStack(alignment: .leading, spacing: 10) {
-          Text("Description :")
-            .font(.headline)
-            .fontWeight(.bold)
-          TextField("Description", text: $viewModel.description)
-            .padding(8)
-            .background(Color.white.opacity(0.3))
-            .cornerRadius(6)
-        }
+        CustomTextFieldView(title: "Name", value: $viewModel.name)
+        CustomTextFieldView(title: "Description", value: $viewModel.description)
         Spacer()
       }
       .foregroundStyle(.white)
@@ -77,14 +67,17 @@ struct ProfileView: View {
       .toolbar {
         ToolbarItem(placement: .confirmationAction) {
           Button("Done") {
-            viewModel.showSheet.toggle()
+            showSheet.toggle()
+            viewModel.onSubmit()
           }
         }
       }
     }
     .background(Color.black.ignoresSafeArea(.all))
   }
+  
 }
+
 
 #Preview {
   ProfileView()

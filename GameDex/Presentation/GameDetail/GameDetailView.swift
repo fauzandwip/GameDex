@@ -24,10 +24,8 @@ struct GameDetailView: View {
         LoadingGameDetail()
       } else if let errorMessage = viewModel.errorMessage {
         ErrorView(message: errorMessage)
-      } else {
-        if let gameDetail = viewModel.gameDetail {
+      } else if let gameDetail = viewModel.gameDetail {
           mainContent(detail: gameDetail)
-        }
       }
     }
     .background(.black)
@@ -41,7 +39,7 @@ struct GameDetailView: View {
         }
       }
     }
-    .onAppear {
+    .task(id: gameId) {
       viewModel.getIsFavorite(id: gameId)
     }
   }
