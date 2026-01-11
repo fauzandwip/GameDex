@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B0AE2C22F12FE1E00F28738 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7B0AE2C12F12FE1E00F28738 /* .swiftlint.yml */; };
 		7B21B0862F1019E9003B22D6 /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7B21B0852F1019E9003B22D6 /* FactoryKit */; };
 		7B7275532E1EB88200B77D94 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7B7275522E1EB88200B77D94 /* Alamofire */; };
 		7BD15EA02E2CC29700E38ED3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD15E9F2E2CC29700E38ED3 /* Kingfisher */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B0AE2ED2F13639400F28738 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B7275322E1EB5E600B77D94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B7275392E1EB5E600B77D94;
+			remoteInfo = GameDex;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7B7275592E1EBACF00B77D94 /* Embed Frameworks */ = {
@@ -26,10 +37,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7B0AE2C12F12FE1E00F28738 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		7B0AE2E92F13639400F28738 /* GameDexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameDexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B72753A2E1EB5E600B77D94 /* GameDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		7B0AE2EA2F13639400F28738 /* GameDexTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GameDexTests;
+			sourceTree = "<group>";
+		};
 		7B72753C2E1EB5E600B77D94 /* GameDex */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = GameDex;
@@ -38,6 +56,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7B0AE2E62F13639400F28738 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B7275372E1EB5E600B77D94 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				7B72753C2E1EB5E600B77D94 /* GameDex */,
+				7B0AE2EA2F13639400F28738 /* GameDexTests */,
+				7B0AE2C12F12FE1E00F28738 /* .swiftlint.yml */,
 				7B72753B2E1EB5E600B77D94 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				7B72753A2E1EB5E600B77D94 /* GameDex.app */,
+				7B0AE2E92F13639400F28738 /* GameDexTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +98,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7B0AE2E82F13639400F28738 /* GameDexTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B0AE2EF2F13639400F28738 /* Build configuration list for PBXNativeTarget "GameDexTests" */;
+			buildPhases = (
+				7B0AE2E52F13639400F28738 /* Sources */,
+				7B0AE2E62F13639400F28738 /* Frameworks */,
+				7B0AE2E72F13639400F28738 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B0AE2EE2F13639400F28738 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7B0AE2EA2F13639400F28738 /* GameDexTests */,
+			);
+			name = GameDexTests;
+			packageProductDependencies = (
+			);
+			productName = GameDexTests;
+			productReference = 7B0AE2E92F13639400F28738 /* GameDexTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7B7275392E1EB5E600B77D94 /* GameDex */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B7275482E1EB5EA00B77D94 /* Build configuration list for PBXNativeTarget "GameDex" */;
@@ -107,6 +158,10 @@
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					7B0AE2E82F13639400F28738 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 7B7275392E1EB5E600B77D94;
+					};
 					7B7275392E1EB5E600B77D94 = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -132,15 +187,24 @@
 			projectRoot = "";
 			targets = (
 				7B7275392E1EB5E600B77D94 /* GameDex */,
+				7B0AE2E82F13639400F28738 /* GameDexTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7B0AE2E72F13639400F28738 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B7275382E1EB5E600B77D94 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B0AE2C22F12FE1E00F28738 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +231,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7B0AE2E52F13639400F28738 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B7275362E1EB5E600B77D94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -176,7 +247,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7B0AE2EE2F13639400F28738 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B7275392E1EB5E600B77D94 /* GameDex */;
+			targetProxy = 7B0AE2ED2F13639400F28738 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		7B0AE2F02F13639400F28738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B9S7PB8R45;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dicoding.academy.GameDexTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameDex.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GameDex";
+			};
+			name = Debug;
+		};
+		7B0AE2F12F13639400F28738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B9S7PB8R45;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dicoding.academy.GameDexTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameDex.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GameDex";
+			};
+			name = Release;
+		};
 		7B7275462E1EB5EA00B77D94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -359,6 +474,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7B0AE2EF2F13639400F28738 /* Build configuration list for PBXNativeTarget "GameDexTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B0AE2F02F13639400F28738 /* Debug */,
+				7B0AE2F12F13639400F28738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7B7275352E1EB5E600B77D94 /* Build configuration list for PBXProject "GameDex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
