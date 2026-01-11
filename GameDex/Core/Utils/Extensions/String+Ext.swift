@@ -24,10 +24,3 @@ extension String {
     return "Invalid date"
   }
 }
-
-
-/// TODO:
-/// 1. restructure folder √
-/// 2. add DI using Factory √
-/// 3. implement clean architecture (usecase) √
-/// 4. implement reactive for viewmodel (state, etc)
