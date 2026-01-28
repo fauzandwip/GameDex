@@ -24,10 +24,15 @@ class APIService: APIServiceProtocol {
     inputParameters: [String: String],
     responseType: T.Type
   ) -> AnyPublisher<T, Error> {
-    var parameters = inputParameters
-    parameters["key"] = apiKey
-    
     return Future<T, Error> { promise in
+      guard let apiKey = self.apiKey else {
+        promise(.failure(APIError.customError("Need API key")))
+        return
+      }
+      
+      var parameters = inputParameters
+      parameters["key"] = apiKey
+      
       AF.request(
         endpoint,
         method: .get,
@@ -50,18 +55,21 @@ class APIService: APIServiceProtocol {
 }
 
 extension APIService {
-  private var apiKey: String {
+  private var apiKey: String? {
     guard let filePath = Bundle.main.path(forResource: "RAWG-Info", ofType: "plist") else {
-      fatalError("Couldn't find file 'RAWG-Info.plist'.")
+      print("Couldn't find file 'RAWG-Info.plist'.")
+      return nil
     }
     
     let plist = NSDictionary(contentsOfFile: filePath)
     guard let value = plist?.object(forKey: "RAWG_API_KEY") as? String else {
-      fatalError("Couldn't find key 'RAWG_API_KEY' in 'RAWG-Info.plist'.")
+      print("Couldn't find key 'RAWG_API_KEY' in 'RAWG-Info.plist'.")
+      return nil
     }
     
     if value.starts(with: "_") {
-      fatalError("Register for a RAWG developer account and get an API key at https://rawg.io/apidocs.")
+      print("Register for a RAWG developer account and get an API key at https://rawg.io/apidocs.")
+      return nil
     }
     
     return value

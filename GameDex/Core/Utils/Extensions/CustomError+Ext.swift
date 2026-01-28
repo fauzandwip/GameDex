@@ -13,7 +13,7 @@ enum APIError: Error, LocalizedError {
   var errorDescription: String? {
     switch self {
     case .customError(let message):
-      return "error \(message)"
+      return "error: \(message)"
     }
   }
 }
