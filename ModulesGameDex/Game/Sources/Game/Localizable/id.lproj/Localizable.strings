@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Game
+
+  Created by Fauzan Dwi Prasetyo on 31/01/26.
+  
+*/
+
+"search_title" = "Pencarian";
+"search_field" = "pencarian...";
+"sort_title" = "Urutkan";
+"oldest" = "Terlama";
+"latest" = "Terbaru";
+"game_name" = "Nama Permainan";
+"about_game" = "Tentang Permainan";
+"released_date" = "Tanggal Rilis";

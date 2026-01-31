@@ -1,0 +1,42 @@
+{
+  "originHash" : "63c1895c29574547951ace18e5a7e69cebbdebf93192cd580f3b727419e05fc4",
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire",
+      "state" : {
+        "revision" : "7be73f6c2b5cd90e40798b06ebd5da8f9f79cf88",
+        "version" : "5.11.0"
+      }
+    },
+    {
+      "identity" : "factory",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hmlongco/Factory",
+      "state" : {
+        "revision" : "ccc898f21992ebc130bc04cc197460a5ae230bcf",
+        "version" : "2.5.3"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher",
+      "state" : {
+        "revision" : "d30a5fad881137e2267f96a8e3fc35c58999bb94",
+        "version" : "8.6.2"
+      }
+    },
+    {
+      "identity" : "modularization-designsystem-package_dicoding-iosexpert",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fauzandwip/Modularization-DesignSystem-Package_Dicoding-iOSExpert",
+      "state" : {
+        "revision" : "977dc115581439c6a031adc570fca437fda84784",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

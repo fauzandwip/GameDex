@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Game
+
+  Created by Fauzan Dwi Prasetyo on 31/01/26.
+  
+*/
+
+"search_title" = "Search";
+"search_field" = "search...";
+"sort_title" = "Sort";
+"oldest" = "Oldest";
+"latest" = "Latest";
+"game_name" = "Game Name";
+"about_game" = "About Game";
+"released_date" = "Released Date";

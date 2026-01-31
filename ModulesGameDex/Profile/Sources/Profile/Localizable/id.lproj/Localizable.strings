@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Profile
+
+  Created by Fauzan Dwi Prasetyo on 31/01/26.
+  
+*/
+
+"nav_title" = "Profil";
+"sheet_title" = "Ubah Profil";
+"sheet_submit" = "Selesai";
+"form_label_name" = "Nama :";
+"form_label_description" = "Deskripsi :";

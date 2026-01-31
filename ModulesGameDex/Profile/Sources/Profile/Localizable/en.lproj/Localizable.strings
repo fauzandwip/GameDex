@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  Profile
+
+  Created by Fauzan Dwi Prasetyo on 31/01/26.
+  
+*/
+
+"nav_title" = "Profile";
+"sheet_title" = "Edit Profile";
+"sheet_submit" = "Done";
+"form_label_name" = "Name :";
+"form_label_description" = "Description :";
+

@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Favorite
+
+  Created by Fauzan Dwi Prasetyo on 31/01/26.
+  
+*/
+
+"nav_title" = "Favorit";
+"game_name" = "Nama Permainan";
+"empty_list" = "Daftar favorit anda kosong.";
