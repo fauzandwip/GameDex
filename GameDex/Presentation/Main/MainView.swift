@@ -21,11 +21,11 @@ struct MainView: View {
   var body: some View {
     NavigationView {
       TabView {
-        Tab("Games", systemImage: "gamecontroller") {
+        Tab("games", systemImage: "gamecontroller") {
           GameListView { ProfileView() }
         }
         
-        Tab("Favorites", systemImage: "heart") {
+        Tab("favorites", systemImage: "heart") {
           FavoriteListView { id in
             GameDetailView(gameId: id)
           }
