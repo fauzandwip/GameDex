@@ -6,9 +6,9 @@
 //
 
 import XCTest
-import FactoryKit
+import Factory
 
-@testable import GameDex
+@testable import Profile
 
 final class ProfileUseCaseTests: XCTestCase {
   private var mockUserProfileRepository: MockUserProfileRepository!

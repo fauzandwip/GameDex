@@ -6,7 +6,8 @@
 //
 
 import Foundation
-@testable import GameDex
+
+@testable import Profile
 
 class MockUserProfileRepository: UserProfileRepositoryProtocol {
   var stubbedName: String = "fauzan"

@@ -11,6 +11,8 @@
 		7B1498B82F2DC48B005BA63A /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 7B1498B72F2DC48B005BA63A /* DesignSystem */; };
 		7B21B0862F1019E9003B22D6 /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7B21B0852F1019E9003B22D6 /* FactoryKit */; };
 		7B7275532E1EB88200B77D94 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7B7275522E1EB88200B77D94 /* Alamofire */; };
+		7B94500F2F2DCFC600405553 /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = 7B94500E2F2DCFC600405553 /* Profile */; };
+		7B94502B2F2DCFE200405553 /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = 7B94502A2F2DCFE200405553 /* Profile */; };
 		7BD15EA02E2CC29700E38ED3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD15E9F2E2CC29700E38ED3 /* Kingfisher */; };
 		7BDF4F772F2C173A003BF637 /* Favorite in Frameworks */ = {isa = PBXBuildFile; productRef = 7BDF4F762F2C173A003BF637 /* Favorite */; };
 		7BDF50842F2C1B4C003BF637 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 7BDF50832F2C1B4C003BF637 /* Core */; };
@@ -74,7 +76,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B94502B2F2DCFE200405553 /* Profile in Frameworks */,
 				7BF5F4B22F2C2BDA00CE205C /* Profile in Frameworks */,
+				7B94500F2F2DCFC600405553 /* Profile in Frameworks */,
 				7BDF4F772F2C173A003BF637 /* Favorite in Frameworks */,
 				7B21B0862F1019E9003B22D6 /* FactoryKit in Frameworks */,
 				7BF5F52B2F2C2D2100CE205C /* Profile in Frameworks */,
@@ -172,6 +176,8 @@
 				7BF5F52A2F2C2D2100CE205C /* Profile */,
 				7BF5F8692F2D7B7500CE205C /* Profile */,
 				7B1498B72F2DC48B005BA63A /* DesignSystem */,
+				7B94500E2F2DCFC600405553 /* Profile */,
+				7B94502A2F2DCFE200405553 /* Profile */,
 			);
 			productName = GameDex;
 			productReference = 7B72753A2E1EB5E600B77D94 /* GameDex.app */;
@@ -212,8 +218,8 @@
 				7BDF4F752F2C173A003BF637 /* XCLocalSwiftPackageReference "../../ModulesGameDex/Favorite" */,
 				7BDF50822F2C1B4C003BF637 /* XCLocalSwiftPackageReference "../../ModulesGameDex/Core" */,
 				7BF5F4B32F2C2BEA00CE205C /* XCLocalSwiftPackageReference "../../ModulesGameDex/Game" */,
-				7BF5F8682F2D7B7500CE205C /* XCLocalSwiftPackageReference "../../ModulesGameDex/Profile" */,
 				7B1498B62F2DC48B005BA63A /* XCRemoteSwiftPackageReference "Modularization-DesignSystem-Package_Dicoding-iOSExpert" */,
+				7B9450292F2DCFE200405553 /* XCLocalSwiftPackageReference "../../ModulesGameDex/Profile" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7B72753B2E1EB5E600B77D94 /* Products */;
@@ -456,6 +462,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"GameDex/Preview Content\"";
 				DEVELOPMENT_TEAM = B9S7PB8R45;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -488,6 +495,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"GameDex/Preview Content\"";
 				DEVELOPMENT_TEAM = B9S7PB8R45;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -542,6 +550,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
+		7B9450292F2DCFE200405553 /* XCLocalSwiftPackageReference "../../ModulesGameDex/Profile" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../ModulesGameDex/Profile;
+		};
 		7BDF4F752F2C173A003BF637 /* XCLocalSwiftPackageReference "../../ModulesGameDex/Favorite" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../ModulesGameDex/Favorite;
@@ -553,10 +565,6 @@
 		7BF5F4B32F2C2BEA00CE205C /* XCLocalSwiftPackageReference "../../ModulesGameDex/Game" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../ModulesGameDex/Game;
-		};
-		7BF5F8682F2D7B7500CE205C /* XCLocalSwiftPackageReference "../../ModulesGameDex/Profile" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../ModulesGameDex/Profile;
 		};
 /* End XCLocalSwiftPackageReference section */
 
@@ -610,6 +618,15 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7B7275512E1EB88200B77D94 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		7B94500E2F2DCFC600405553 /* Profile */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B1498B62F2DC48B005BA63A /* XCRemoteSwiftPackageReference "Modularization-DesignSystem-Package_Dicoding-iOSExpert" */;
+			productName = Profile;
+		};
+		7B94502A2F2DCFE200405553 /* Profile */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Profile;
 		};
 		7BD15E9F2E2CC29700E38ED3 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
