@@ -1,5 +1,5 @@
 {
-  "originHash" : "f0a55760b19982de81fd9a318b0b7d7b2a19529f1864f2d95cdf3a16ce988f9b",
+  "originHash" : "6b887c98ae07bf2f0ed5fe4cae358ea7b18df766e5a3c41b8f75848ddace0295",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -26,6 +26,15 @@
       "state" : {
         "revision" : "2015fda791daa72c8058619545a593bf8c1dd59f",
         "version" : "8.5.0"
+      }
+    },
+    {
+      "identity" : "modularization-designsystem-package_dicoding-iosexpert",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fauzandwip/Modularization-DesignSystem-Package_Dicoding-iOSExpert.git",
+      "state" : {
+        "revision" : "977dc115581439c6a031adc570fca437fda84784",
+        "version" : "1.0.0"
       }
     }
   ],
