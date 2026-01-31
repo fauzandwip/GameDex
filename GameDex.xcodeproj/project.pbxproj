@@ -11,6 +11,13 @@
 		7B21B0862F1019E9003B22D6 /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7B21B0852F1019E9003B22D6 /* FactoryKit */; };
 		7B7275532E1EB88200B77D94 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7B7275522E1EB88200B77D94 /* Alamofire */; };
 		7BD15EA02E2CC29700E38ED3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD15E9F2E2CC29700E38ED3 /* Kingfisher */; };
+		7BDF4F772F2C173A003BF637 /* Favorite in Frameworks */ = {isa = PBXBuildFile; productRef = 7BDF4F762F2C173A003BF637 /* Favorite */; };
+		7BDF50842F2C1B4C003BF637 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 7BDF50832F2C1B4C003BF637 /* Core */; };
+		7BF5F24D2F2C25F800CE205C /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 7BF5F24C2F2C25F800CE205C /* DesignSystem */; };
+		7BF5F4B22F2C2BDA00CE205C /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = 7BF5F4B12F2C2BDA00CE205C /* Profile */; };
+		7BF5F4B52F2C2BEA00CE205C /* Game in Frameworks */ = {isa = PBXBuildFile; productRef = 7BF5F4B42F2C2BEA00CE205C /* Game */; };
+		7BF5F52B2F2C2D2100CE205C /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = 7BF5F52A2F2C2D2100CE205C /* Profile */; };
+		7BF5F86A2F2D7B7500CE205C /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = 7BF5F8692F2D7B7500CE205C /* Profile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +74,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BF5F4B22F2C2BDA00CE205C /* Profile in Frameworks */,
+				7BDF4F772F2C173A003BF637 /* Favorite in Frameworks */,
 				7B21B0862F1019E9003B22D6 /* FactoryKit in Frameworks */,
+				7BF5F52B2F2C2D2100CE205C /* Profile in Frameworks */,
 				7BD15EA02E2CC29700E38ED3 /* Kingfisher in Frameworks */,
+				7BF5F24D2F2C25F800CE205C /* DesignSystem in Frameworks */,
+				7BDF50842F2C1B4C003BF637 /* Core in Frameworks */,
+				7BF5F4B52F2C2BEA00CE205C /* Game in Frameworks */,
+				7BF5F86A2F2D7B7500CE205C /* Profile in Frameworks */,
 				7B7275532E1EB88200B77D94 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +96,7 @@
 				7B72753C2E1EB5E600B77D94 /* GameDex */,
 				7B0AE2EA2F13639400F28738 /* GameDexTests */,
 				7B0AE2C12F12FE1E00F28738 /* .swiftlint.yml */,
+				7BF5F8332F2D78D600CE205C /* Frameworks */,
 				7B72753B2E1EB5E600B77D94 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +108,13 @@
 				7B0AE2E92F13639400F28738 /* GameDexTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7BF5F8332F2D78D600CE205C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +165,13 @@
 				7B7275522E1EB88200B77D94 /* Alamofire */,
 				7BD15E9F2E2CC29700E38ED3 /* Kingfisher */,
 				7B21B0852F1019E9003B22D6 /* FactoryKit */,
+				7BDF4F762F2C173A003BF637 /* Favorite */,
+				7BDF50832F2C1B4C003BF637 /* Core */,
+				7BF5F24C2F2C25F800CE205C /* DesignSystem */,
+				7BF5F4B12F2C2BDA00CE205C /* Profile */,
+				7BF5F4B42F2C2BEA00CE205C /* Game */,
+				7BF5F52A2F2C2D2100CE205C /* Profile */,
+				7BF5F8692F2D7B7500CE205C /* Profile */,
 			);
 			productName = GameDex;
 			productReference = 7B72753A2E1EB5E600B77D94 /* GameDex.app */;
@@ -180,6 +209,11 @@
 				7B7275512E1EB88200B77D94 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				7BD15E9E2E2CC29700E38ED3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				7B21B0842F1019E9003B22D6 /* XCRemoteSwiftPackageReference "Factory" */,
+				7BDF4F752F2C173A003BF637 /* XCLocalSwiftPackageReference "../../ModulesGameDex/Favorite" */,
+				7BDF50822F2C1B4C003BF637 /* XCLocalSwiftPackageReference "../../ModulesGameDex/Core" */,
+				7BF5F24B2F2C25F800CE205C /* XCLocalSwiftPackageReference "../../ModulesGameDex/DesignSystem" */,
+				7BF5F4B32F2C2BEA00CE205C /* XCLocalSwiftPackageReference "../../ModulesGameDex/Game" */,
+				7BF5F8682F2D7B7500CE205C /* XCLocalSwiftPackageReference "../../ModulesGameDex/Profile" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7B72753B2E1EB5E600B77D94 /* Products */;
@@ -416,6 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GameDex/Preview Content\"";
@@ -428,12 +463,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dicoding.com.GameDex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dicoding.academy.GameDex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -446,6 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GameDex/Preview Content\"";
@@ -458,12 +495,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dicoding.com.GameDex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dicoding.academy.GameDex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -502,6 +540,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		7BDF4F752F2C173A003BF637 /* XCLocalSwiftPackageReference "../../ModulesGameDex/Favorite" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../ModulesGameDex/Favorite;
+		};
+		7BDF50822F2C1B4C003BF637 /* XCLocalSwiftPackageReference "../../ModulesGameDex/Core" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../ModulesGameDex/Core;
+		};
+		7BF5F24B2F2C25F800CE205C /* XCLocalSwiftPackageReference "../../ModulesGameDex/DesignSystem" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../ModulesGameDex/DesignSystem;
+		};
+		7BF5F4B32F2C2BEA00CE205C /* XCLocalSwiftPackageReference "../../ModulesGameDex/Game" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../ModulesGameDex/Game;
+		};
+		7BF5F8682F2D7B7500CE205C /* XCLocalSwiftPackageReference "../../ModulesGameDex/Profile" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../ModulesGameDex/Profile;
+		};
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
 		7B21B0842F1019E9003B22D6 /* XCRemoteSwiftPackageReference "Factory" */ = {
@@ -545,6 +606,34 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7BD15E9E2E2CC29700E38ED3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		7BDF4F762F2C173A003BF637 /* Favorite */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Favorite;
+		};
+		7BDF50832F2C1B4C003BF637 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+		7BF5F24C2F2C25F800CE205C /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
+		};
+		7BF5F4B12F2C2BDA00CE205C /* Profile */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Profile;
+		};
+		7BF5F4B42F2C2BEA00CE205C /* Game */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Game;
+		};
+		7BF5F52A2F2C2D2100CE205C /* Profile */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Profile;
+		};
+		7BF5F8692F2D7B7500CE205C /* Profile */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Profile;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

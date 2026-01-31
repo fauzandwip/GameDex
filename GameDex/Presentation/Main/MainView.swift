@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import Game
+import Favorite
+import Profile
 
 struct MainView: View {
   
@@ -19,11 +22,13 @@ struct MainView: View {
     NavigationView {
       TabView {
         Tab("Games", systemImage: "gamecontroller") {
-          GameListView()
+          GameListView { ProfileView() }
         }
         
         Tab("Favorites", systemImage: "heart") {
-          FavoriteListView()
+          FavoriteListView { id in
+            GameDetailView(gameId: id)
+          }
         }
       }
     }
