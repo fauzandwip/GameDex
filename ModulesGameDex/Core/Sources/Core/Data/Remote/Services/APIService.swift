@@ -24,10 +24,7 @@ public class APIService: APIServiceProtocol {
     inputParameters: [String: String],
     responseType: T.Type
   ) -> AnyPublisher<T, Error> {
-//    return Future<T, Error> { promise in
       guard let apiKey = self.apiKey else {
-//        promise(.failure(APIError.customError("Need API key")))
-//        return Fail(error: APIError.noAPIKey)
         return Fail(error: APIError.customError("Need API key"))
           .eraseToAnyPublisher()
       }
@@ -49,7 +46,6 @@ public class APIService: APIServiceProtocol {
       }
       .receive(on: DispatchQueue.main)
       .eraseToAnyPublisher()
-//    }
   }
 }
 
