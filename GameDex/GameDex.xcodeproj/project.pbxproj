@@ -10,13 +10,14 @@
 		7B0AE2C22F12FE1E00F28738 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7B0AE2C12F12FE1E00F28738 /* .swiftlint.yml */; };
 		7B1498B82F2DC48B005BA63A /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 7B1498B72F2DC48B005BA63A /* DesignSystem */; };
 		7B21B0862F1019E9003B22D6 /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7B21B0852F1019E9003B22D6 /* FactoryKit */; };
+		7B5536E92F2EC2170063C2F6 /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5536E82F2EC2170063C2F6 /* Profile */; };
+		7B5536EC2F2EC2260063C2F6 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5536EB2F2EC2260063C2F6 /* Core */; };
+		7B5536EF2F2EC23E0063C2F6 /* Game in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5536EE2F2EC23E0063C2F6 /* Game */; };
+		7B5536F22F2EC2800063C2F6 /* Favorite in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5536F12F2EC2800063C2F6 /* Favorite */; };
 		7B7275532E1EB88200B77D94 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7B7275522E1EB88200B77D94 /* Alamofire */; };
-		7B94500F2F2DCFC600405553 /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = 7B94500E2F2DCFC600405553 /* Profile */; };
-		7B94502B2F2DCFE200405553 /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = 7B94502A2F2DCFE200405553 /* Profile */; };
 		7BD15EA02E2CC29700E38ED3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD15E9F2E2CC29700E38ED3 /* Kingfisher */; };
 		7BDF4F772F2C173A003BF637 /* Favorite in Frameworks */ = {isa = PBXBuildFile; productRef = 7BDF4F762F2C173A003BF637 /* Favorite */; };
 		7BDF50842F2C1B4C003BF637 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 7BDF50832F2C1B4C003BF637 /* Core */; };
-		7BF5F4B22F2C2BDA00CE205C /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = 7BF5F4B12F2C2BDA00CE205C /* Profile */; };
 		7BF5F4B52F2C2BEA00CE205C /* Game in Frameworks */ = {isa = PBXBuildFile; productRef = 7BF5F4B42F2C2BEA00CE205C /* Game */; };
 		7BF5F52B2F2C2D2100CE205C /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = 7BF5F52A2F2C2D2100CE205C /* Profile */; };
 		7BF5F86A2F2D7B7500CE205C /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = 7BF5F8692F2D7B7500CE205C /* Profile */; };
@@ -76,18 +77,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B94502B2F2DCFE200405553 /* Profile in Frameworks */,
-				7BF5F4B22F2C2BDA00CE205C /* Profile in Frameworks */,
-				7B94500F2F2DCFC600405553 /* Profile in Frameworks */,
 				7BDF4F772F2C173A003BF637 /* Favorite in Frameworks */,
 				7B21B0862F1019E9003B22D6 /* FactoryKit in Frameworks */,
 				7BF5F52B2F2C2D2100CE205C /* Profile in Frameworks */,
+				7B5536EC2F2EC2260063C2F6 /* Core in Frameworks */,
 				7BD15EA02E2CC29700E38ED3 /* Kingfisher in Frameworks */,
 				7B1498B82F2DC48B005BA63A /* DesignSystem in Frameworks */,
+				7B5536EF2F2EC23E0063C2F6 /* Game in Frameworks */,
 				7BDF50842F2C1B4C003BF637 /* Core in Frameworks */,
 				7BF5F4B52F2C2BEA00CE205C /* Game in Frameworks */,
 				7BF5F86A2F2D7B7500CE205C /* Profile in Frameworks */,
+				7B5536E92F2EC2170063C2F6 /* Profile in Frameworks */,
 				7B7275532E1EB88200B77D94 /* Alamofire in Frameworks */,
+				7B5536F22F2EC2800063C2F6 /* Favorite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,13 +173,14 @@
 				7B21B0852F1019E9003B22D6 /* FactoryKit */,
 				7BDF4F762F2C173A003BF637 /* Favorite */,
 				7BDF50832F2C1B4C003BF637 /* Core */,
-				7BF5F4B12F2C2BDA00CE205C /* Profile */,
 				7BF5F4B42F2C2BEA00CE205C /* Game */,
 				7BF5F52A2F2C2D2100CE205C /* Profile */,
 				7BF5F8692F2D7B7500CE205C /* Profile */,
 				7B1498B72F2DC48B005BA63A /* DesignSystem */,
-				7B94500E2F2DCFC600405553 /* Profile */,
-				7B94502A2F2DCFE200405553 /* Profile */,
+				7B5536E82F2EC2170063C2F6 /* Profile */,
+				7B5536EB2F2EC2260063C2F6 /* Core */,
+				7B5536EE2F2EC23E0063C2F6 /* Game */,
+				7B5536F12F2EC2800063C2F6 /* Favorite */,
 			);
 			productName = GameDex;
 			productReference = 7B72753A2E1EB5E600B77D94 /* GameDex.app */;
@@ -216,11 +219,11 @@
 				7B7275512E1EB88200B77D94 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				7BD15E9E2E2CC29700E38ED3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				7B21B0842F1019E9003B22D6 /* XCRemoteSwiftPackageReference "Factory" */,
-				7BDF4F752F2C173A003BF637 /* XCLocalSwiftPackageReference "../../ModulesGameDex/Favorite" */,
-				7BDF50822F2C1B4C003BF637 /* XCLocalSwiftPackageReference "../../ModulesGameDex/Core" */,
-				7BF5F4B32F2C2BEA00CE205C /* XCLocalSwiftPackageReference "../../ModulesGameDex/Game" */,
 				7B1498B62F2DC48B005BA63A /* XCRemoteSwiftPackageReference "Modularization-DesignSystem-Package_Dicoding-iOSExpert" */,
-				7B9450292F2DCFE200405553 /* XCLocalSwiftPackageReference "../../ModulesGameDex/Profile" */,
+				7B5536E72F2EC2170063C2F6 /* XCLocalSwiftPackageReference "../ModulesGameDex/Profile" */,
+				7B5536EA2F2EC2260063C2F6 /* XCLocalSwiftPackageReference "../ModulesGameDex/Core" */,
+				7B5536ED2F2EC23E0063C2F6 /* XCLocalSwiftPackageReference "../ModulesGameDex/Game" */,
+				7B5536F02F2EC2800063C2F6 /* XCLocalSwiftPackageReference "../ModulesGameDex/Favorite" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7B72753B2E1EB5E600B77D94 /* Products */;
@@ -551,21 +554,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		7B9450292F2DCFE200405553 /* XCLocalSwiftPackageReference "../../ModulesGameDex/Profile" */ = {
+		7B5536E72F2EC2170063C2F6 /* XCLocalSwiftPackageReference "../ModulesGameDex/Profile" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../ModulesGameDex/Profile;
+			relativePath = ../ModulesGameDex/Profile;
 		};
-		7BDF4F752F2C173A003BF637 /* XCLocalSwiftPackageReference "../../ModulesGameDex/Favorite" */ = {
+		7B5536EA2F2EC2260063C2F6 /* XCLocalSwiftPackageReference "../ModulesGameDex/Core" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../ModulesGameDex/Favorite;
+			relativePath = ../ModulesGameDex/Core;
 		};
-		7BDF50822F2C1B4C003BF637 /* XCLocalSwiftPackageReference "../../ModulesGameDex/Core" */ = {
+		7B5536ED2F2EC23E0063C2F6 /* XCLocalSwiftPackageReference "../ModulesGameDex/Game" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../ModulesGameDex/Core;
+			relativePath = ../ModulesGameDex/Game;
 		};
-		7BF5F4B32F2C2BEA00CE205C /* XCLocalSwiftPackageReference "../../ModulesGameDex/Game" */ = {
+		7B5536F02F2EC2800063C2F6 /* XCLocalSwiftPackageReference "../ModulesGameDex/Favorite" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../ModulesGameDex/Game;
+			relativePath = ../ModulesGameDex/Favorite;
 		};
 /* End XCLocalSwiftPackageReference section */
 
@@ -615,19 +618,26 @@
 			package = 7B21B0842F1019E9003B22D6 /* XCRemoteSwiftPackageReference "Factory" */;
 			productName = FactoryKit;
 		};
+		7B5536E82F2EC2170063C2F6 /* Profile */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Profile;
+		};
+		7B5536EB2F2EC2260063C2F6 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+		7B5536EE2F2EC23E0063C2F6 /* Game */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Game;
+		};
+		7B5536F12F2EC2800063C2F6 /* Favorite */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Favorite;
+		};
 		7B7275522E1EB88200B77D94 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7B7275512E1EB88200B77D94 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		7B94500E2F2DCFC600405553 /* Profile */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7B1498B62F2DC48B005BA63A /* XCRemoteSwiftPackageReference "Modularization-DesignSystem-Package_Dicoding-iOSExpert" */;
-			productName = Profile;
-		};
-		7B94502A2F2DCFE200405553 /* Profile */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Profile;
 		};
 		7BD15E9F2E2CC29700E38ED3 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -641,10 +651,6 @@
 		7BDF50832F2C1B4C003BF637 /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Core;
-		};
-		7BF5F4B12F2C2BDA00CE205C /* Profile */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Profile;
 		};
 		7BF5F4B42F2C2BEA00CE205C /* Game */ = {
 			isa = XCSwiftPackageProductDependency;
